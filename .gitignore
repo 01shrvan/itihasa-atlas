@@ -5,6 +5,7 @@ dist/
 
 # dependencies
 node_modules/
+AGENTS.md
 
 # logs
 npm-debug.log*

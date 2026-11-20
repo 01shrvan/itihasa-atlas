@@ -1,0 +1,32 @@
+---
+import { nodes } from '../../data/atlas';
+import '../../styles/global.css';
+
+export function getStaticPaths() {
+  return nodes.map((node) => ({ params: { kind: `${node.kind}s`, id: node.id }, props: { node } }));
+}
+
+const { node } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{node.label} · Itihāsa Atlas</title>
+  </head>
+  <body>
+    <main class="record">
+      <header class="record__nav"><a href="/">ITIHĀSA<br /><span>ATLAS</span></a><a href="/#atlas">← BACK TO THE ATLAS</a></header>
+      <article>
+        <p class="eyebrow">{node.kind.toUpperCase()} · {node.reviewStatus.toUpperCase()} EDITORIAL STATUS</p>
+        <p class="record__script">{node.devanagari ?? 'इतिहास'}</p>
+        <h1>{node.label}</h1>
+        <p class="record__thread">THREAD / {node.thread.toUpperCase()} · ATTESTATION / {node.attestation.toUpperCase()}</p>
+        <p class="record__summary">{node.summary}</p>
+        <section class="record__source"><p class="eyebrow">SOURCE NOTE</p><p>{node.citation}</p><p class="record__warning">This entry is a research draft. It is visible for review but not ready to be presented as a settled edition citation or a published translation.</p></section>
+      </article>
+    </main>
+  </body>
+</html>
