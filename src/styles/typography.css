@@ -1,0 +1,3 @@
+h1,h2,h3,.wordmark,.paths strong,.record h1,.detail h3{font-family:var(--font-display)!important}
+.hero__chrome,.hero__weave,.eyebrow,.button,.hero__meta,.tabs button,.search,.ruler,.map small,.map-node,.detail-top,.detail small,.detail a,.detail button,.paths span,.method__note,.record__nav,.record__thread,.record__warning{font-family:var(--font-sans)!important}
+.detail p:not(.script),.method>div,.record__summary,.record__source,.record__script,.script{font-family:var(--font-display)!important}
