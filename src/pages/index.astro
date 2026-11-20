@@ -8,29 +8,103 @@ import '../styles/global.css';
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="description" content="A source-conscious atlas for reading the Mahabharata as a web of choices, vows, and consequences." />
-    <meta name="theme-color" content="#f3eddf" />
+    <meta
+      name="description"
+      content="A source-conscious atlas for reading the Mahabharata as a web of choices, vows and consequences."
+    />
+    <meta name="theme-color" content="#172016" />
     <title>Itihāsa Atlas — Mahābhārata</title>
   </head>
   <body>
     <main>
-      <section class="hero" aria-labelledby="hero-title">
-        <div class="hero__chrome">
-          <a class="wordmark" href="#top">ITIHĀSA<br /><span>ATLAS</span></a>
-          <nav class="hero__nav" aria-label="Primary navigation"><a href="#atlas">ATLAS</a><a href="#method">METHOD</a></nav>
-          <p class="hero__edition">MĀHĀBHĀRATA<br />FIELD NOTES · 001</p>
+      <section class="opening" id="top" aria-labelledby="hero-title">
+        <header class="masthead">
+          <a class="wordmark" href="#top" aria-label="Itihasa Atlas home">
+            ITIHĀSA
+            <span>ATLAS</span>
+          </a>
+          <p class="masthead__edition">MĀHĀBHĀRATA / READING OFFICE</p>
+          <nav aria-label="Primary navigation">
+            <a href="#atlas">ATLAS</a>
+            <a href="#protocol">PROTOCOL</a>
+          </nav>
+        </header>
+
+        <div class="opening__grid">
+          <div class="opening__copy">
+            <p class="label label--sage">SABHĀ PARVA / ENTRY POINT 01</p>
+            <h1 id="hero-title">
+              The dice were
+              <br />
+              never only
+              <br />
+              <em>a game.</em>
+            </h1>
+            <p class="opening__dek">
+              A reading instrument for the promises, silences and legal questions that
+              make the Mahābhārata impossible to flatten into a single story.
+            </p>
+            <a class="enter-link" href="#atlas">
+              TRACE THE PRESSURE <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+
+          <aside class="case-sheet" aria-label="The dice hall reading prompt">
+            <div class="case-sheet__topline">
+              <span>READING PROMPT</span>
+              <span>01 / 11</span>
+            </div>
+            <pre aria-hidden="true">┌──────────────────────────┐
+│       SABHĀ  HALL         │
+│                          │
+│  YUDHIṢṬHIRA ── WAGER     │
+│        │                 │
+│        └──── DRAUPADĪ ?   │
+│                          │
+│  THE COURT DOES NOT ANSWER│
+└──────────────────────────┘</pre>
+            <p class="case-sheet__question">
+              When a king loses himself, what exactly is left for him to stake?
+            </p>
+            <div class="case-sheet__source">
+              <span>BASE TEXT</span>
+              <strong>CRITICAL EDITION</strong>
+              <span>STATUS</span>
+              <strong>EDITORIAL DRAFT</strong>
+            </div>
+            <a href="#atlas">OPEN THIS QUESTION ↘</a>
+          </aside>
         </div>
-        <div class="hero__weave" aria-hidden="true"><span>● ─ ─ ─ ─ ─ ─ ─ ●</span><span>╲&nbsp;&nbsp; ╳ &nbsp;&nbsp;╱</span><span>● ─ ─ ─ ─ ─ ─ ─ ●</span></div>
-        <div class="hero__copy" id="top">
-          <p class="eyebrow">AN ATLAS OF CONSEQUENCE</p>
-          <h1 id="hero-title">Every war begins<br />long before the <em>battlefield.</em></h1>
-          <p class="hero__intro">Trace the vows, inheritances and impossible choices that pull a family toward Kurukṣetra.</p>
-          <a class="button" href="#atlas">ENTER THE ATLAS <span aria-hidden="true">↓</span></a>
-        </div>
-        <div class="hero__meta"><span>18 PARVAS</span><span>∞ CONSEQUENCES</span><span>01 / 03 PATHS OPEN</span></div>
+
+        <footer class="opening__footer">
+          <span>START AT THE DICE HALL</span>
+          <span>FOLLOW THE CONSEQUENCE, NOT THE CHARACTER</span>
+          <span>EDITION-AWARE / REVIEW-GATED</span>
+        </footer>
       </section>
+
       <AtlasExplorer client:load />
-      <section id="method" class="method"><p class="eyebrow">READING WITH CARE</p><h2>One epic,<br /><em>many witnesses.</em></h2><div><p>Every node in this atlas carries an edition-aware reference. The Critical Edition is the baseline; received and regional traditions remain visible where they change the story.</p><p class="method__note">This preview contains editorial drafts. Verse translations and transliterations remain unpublished until they receive a named Sanskrit reviewer.</p></div></section>
+
+      <section class="protocol" id="protocol" aria-labelledby="protocol-title">
+        <p class="label">READING PROTOCOL</p>
+        <div class="protocol__number">02</div>
+        <div>
+          <h2 id="protocol-title">
+            No node is
+            <br />a final answer.
+          </h2>
+          <p>
+            Every record keeps its attestation visible. The Critical Edition is the
+            working baseline; received and regional traditions are named where they change
+            the story.
+          </p>
+        </div>
+        <small>
+          Sanskrit text, transliteration and translation stay marked as draft until a
+          named reviewer checks them. This interface makes that limit visible instead of
+          hiding it in a footnote.
+        </small>
+      </section>
     </main>
   </body>
 </html>

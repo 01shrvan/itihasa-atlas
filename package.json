@@ -9,7 +9,9 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier --write \"src/**/*.{astro,ts,tsx,css}\" package.json astro.config.mjs prettier.config.mjs",
+    "format:check": "prettier --check \"src/**/*.{astro,ts,tsx,css}\" package.json astro.config.mjs prettier.config.mjs"
   },
   "dependencies": {
     "@astrojs/react": "^7.1.9",
@@ -22,5 +24,9 @@
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
     "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "prettier": "^3.10.1",
+    "prettier-plugin-astro": "^1.1.2"
   }
 }
