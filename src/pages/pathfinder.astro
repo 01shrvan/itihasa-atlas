@@ -1,0 +1,32 @@
+---
+import Pathfinder from '../components/Pathfinder.tsx';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="theme-color" content="#172016" />
+    <title>Pathfinder — Itihāsa Atlas</title>
+  </head>
+  <body>
+    <main class="subpage pathfinder-page">
+      <header class="subnav subnav--dark">
+        <a class="wordmark" href="/">
+          ITIHĀSA <span>ATLAS</span>
+        </a>
+        <nav aria-label="Product navigation">
+          <a href="/#atlas">ATLAS</a>
+          <a href="/verse-lens">VERSE LENS</a>
+          <a aria-current="page" href="/pathfinder">
+            PATHFINDER
+          </a>
+          <a href="/protocol">PROTOCOL</a>
+        </nav>
+      </header>
+      <Pathfinder client:load />
+    </main>
+  </body>
+</html>

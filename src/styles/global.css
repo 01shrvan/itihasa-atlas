@@ -8,6 +8,8 @@
   --sage-dim: #758c6f;
   --bone: #e9e2d2;
   --bone-dim: #bdb6a8;
+  --paper-grid: #dcd5c6;
+  --muted: #6d7369;
   --ink: #182015;
   --rust: #d75a38;
   --line-dark: rgba(230, 240, 228, 0.2);
@@ -323,7 +325,7 @@ h1 em {
   background: none;
   border: 0;
   border-right: 1px solid var(--line-light);
-  color: #6d7369;
+  color: var(--muted);
   padding: 0.92rem 1.1rem;
 }
 
@@ -353,11 +355,11 @@ h1 em {
 }
 
 .atlas-search input::placeholder {
-  color: #6d7369;
+  color: var(--muted);
 }
 
 .atlas__stage {
-  background: #dcd5c6;
+  background: var(--paper-grid);
   border: 1px solid var(--ink);
   border-top: 0;
   display: grid;
@@ -382,7 +384,7 @@ h1 em {
 }
 
 .map-scale {
-  color: #687064;
+  color: var(--muted);
   display: flex;
   justify-content: space-between;
   left: 1rem;
@@ -492,7 +494,7 @@ h1 em {
 
 .map-instruction {
   bottom: 1rem;
-  color: #687064;
+  color: var(--muted);
   left: 1rem;
   margin: 0;
   position: absolute;
@@ -660,6 +662,17 @@ h1 em {
   max-width: 31ch;
 }
 
+.protocol__link {
+  align-self: end;
+  color: var(--sage);
+  font-size: 0.65rem;
+  font-weight: 550;
+  grid-column: 3;
+  letter-spacing: 0.08em;
+  margin-top: 1rem;
+  text-decoration: none;
+}
+
 .record {
   background: var(--bone);
   color: var(--ink);
@@ -710,7 +723,7 @@ h1 em {
 }
 
 .record__thread {
-  color: #687064;
+  color: var(--muted);
 }
 
 .record__summary {
@@ -736,6 +749,306 @@ h1 em {
   font-size: 0.65rem;
   letter-spacing: 0.04em;
   line-height: 1.5;
+}
+
+.subpage {
+  min-height: 100svh;
+  padding: 1.6rem clamp(1.25rem, 5vw, 6rem) 5rem;
+}
+
+.subnav {
+  align-items: flex-start;
+  display: flex;
+  justify-content: space-between;
+}
+
+.wordmark--ink {
+  color: var(--ink);
+}
+
+.wordmark--ink span {
+  color: var(--rust);
+}
+
+.subnav nav {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.subnav nav a {
+  color: var(--ink);
+  font-size: 0.62rem;
+  font-weight: 550;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+}
+
+.subnav nav a[aria-current='page'] {
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 0.35rem;
+}
+
+.subnav--dark nav a {
+  color: var(--bone);
+}
+
+.verse-page,
+.protocol-page {
+  background: var(--bone);
+  color: var(--ink);
+}
+
+.verse-hero {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1.45fr 0.55fr;
+  margin: clamp(7rem, 14vh, 12rem) auto clamp(5rem, 9vw, 8rem);
+  max-width: 78rem;
+}
+
+.verse-hero__eyebrow {
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  margin: 2rem 0 0;
+}
+
+.verse-hero h1,
+.protocol-page__intro h1 {
+  font-size: clamp(4rem, 8vw, 8.8rem);
+  line-height: 0.84;
+  margin: 1.5rem 0 0;
+  max-width: 9ch;
+}
+
+.verse-hero__deck {
+  align-self: end;
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
+  line-height: 1.35;
+  margin: 0;
+  max-width: 24ch;
+}
+
+.verse-plate {
+  border-bottom: 1px solid var(--ink);
+  border-top: 1px solid var(--ink);
+  margin: 0 auto;
+  max-width: 78rem;
+  padding: 1rem 0 3.2rem;
+}
+
+.verse-plate__folio {
+  font-size: 0.62rem;
+  font-weight: 550;
+  letter-spacing: 0.08em;
+}
+
+.verse-plate__sanskrit {
+  font-family: var(--display);
+  font-size: clamp(2.3rem, 4.5vw, 5rem);
+  letter-spacing: 0;
+  line-height: 1.25;
+  margin: 4rem 0 0;
+}
+
+.verse-plate__sanskrit + .verse-plate__sanskrit {
+  margin-top: 0.5rem;
+}
+
+.verse-plate__grid {
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 4.5rem;
+}
+
+.verse-plate__grid p {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.verse-plate__grid span {
+  color: var(--rust);
+  display: block;
+  font-weight: 550;
+  margin-bottom: 0.45rem;
+}
+
+.verse-note {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 0.32fr 1.25fr 0.55fr;
+  margin: clamp(5rem, 11vw, 10rem) auto 0;
+  max-width: 78rem;
+}
+
+.verse-note blockquote {
+  font-family: var(--display);
+  font-size: clamp(2rem, 3.8vw, 4.1rem);
+  letter-spacing: -0.025em;
+  line-height: 1.05;
+  margin: 0;
+}
+
+.verse-note div {
+  align-self: end;
+  font-size: 0.92rem;
+  line-height: 1.58;
+}
+
+.verse-note div p {
+  margin: 0;
+}
+
+.verse-note a {
+  color: var(--rust);
+  display: inline-block;
+  font-size: 0.65rem;
+  font-weight: 550;
+  letter-spacing: 0.08em;
+  margin-top: 1.8rem;
+  text-decoration: none;
+}
+
+.pathfinder-page {
+  background: var(--forest);
+  color: var(--bone);
+}
+
+.pathfinder-tool {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(19rem, 0.95fr);
+  margin: clamp(6rem, 13vh, 11rem) auto 0;
+  max-width: 78rem;
+}
+
+.pathfinder-tool__prompt {
+  min-height: 32rem;
+  padding-right: clamp(2rem, 5vw, 6rem);
+}
+
+.pathfinder-tool__index {
+  color: var(--sage);
+  font-size: 0.64rem;
+  font-weight: 550;
+  letter-spacing: 0.08em;
+  margin: 2.5rem 0 0;
+}
+
+.pathfinder-tool h2 {
+  font-size: clamp(3.7rem, 7.5vw, 8.2rem);
+  line-height: 0.84;
+  margin: 1rem 0 0;
+}
+
+.pathfinder-tool__choices {
+  border-top: 1px solid var(--line-dark);
+}
+
+.pathfinder-tool__choices button {
+  align-items: baseline;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line-dark);
+  color: var(--bone-dim);
+  display: grid;
+  font-family: var(--display);
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  gap: 1rem;
+  grid-template-columns: 2rem 1fr;
+  letter-spacing: -0.025em;
+  padding: 1.5rem 0;
+  text-align: left;
+  width: 100%;
+}
+
+.pathfinder-tool__choices button span {
+  color: var(--sage-dim);
+  font-family: var(--sans);
+  font-size: 0.6rem;
+  font-weight: 550;
+  letter-spacing: 0.08em;
+}
+
+.pathfinder-tool__choices button.is-selected,
+.pathfinder-tool__choices button:hover {
+  color: var(--bone);
+}
+
+.pathfinder-tool__result {
+  border-top: 1px solid var(--sage);
+  grid-column: 2;
+  margin-top: 4.5rem;
+  padding-top: 1rem;
+}
+
+.pathfinder-tool__result > p:not(.label) {
+  font-family: var(--display);
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  line-height: 1.24;
+  margin: 1.4rem 0 2rem;
+  max-width: 29ch;
+}
+
+.pathfinder-tool__result small {
+  color: var(--bone-dim);
+  font-size: 0.68rem;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+.protocol-page__intro {
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: 1.15fr 0.55fr;
+  margin: clamp(7rem, 15vh, 13rem) auto clamp(5rem, 10vw, 9rem);
+  max-width: 78rem;
+}
+
+.protocol-page__intro > p:last-child {
+  align-self: end;
+  font-family: var(--display);
+  font-size: clamp(1.25rem, 1.8vw, 1.7rem);
+  line-height: 1.4;
+  margin: 0;
+  max-width: 27ch;
+}
+
+.protocol-list {
+  border-top: 1px solid var(--ink);
+  margin: 0 auto;
+  max-width: 78rem;
+}
+
+.protocol-list article {
+  align-items: baseline;
+  border-bottom: 1px solid var(--line-light);
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 0.18fr 0.65fr 1fr;
+  padding: 2rem 0;
+}
+
+.protocol-list span {
+  color: var(--rust);
+  font-size: 0.66rem;
+  font-weight: 550;
+  letter-spacing: 0.08em;
+}
+
+.protocol-list h2 {
+  font-size: clamp(1.9rem, 3vw, 3rem);
+  line-height: 0.9;
+  margin: 0;
+}
+
+.protocol-list p {
+  font-size: 1rem;
+  line-height: 1.58;
+  margin: 0;
+  max-width: 37ch;
 }
 
 @media (max-width: 780px) {
@@ -842,6 +1155,80 @@ h1 em {
 
   .record__nav a:last-child {
     text-align: right;
+  }
+
+  .subnav {
+    gap: 1.5rem;
+  }
+
+  .subnav nav {
+    flex-wrap: wrap;
+    gap: 0.8rem 1rem;
+    justify-content: flex-end;
+  }
+
+  .subnav nav a {
+    font-size: 0.54rem;
+  }
+
+  .verse-hero,
+  .verse-note,
+  .pathfinder-tool,
+  .protocol-page__intro {
+    display: block;
+  }
+
+  .verse-hero {
+    margin-top: 6rem;
+  }
+
+  .verse-hero__deck,
+  .protocol-page__intro > p:last-child {
+    margin-top: 2.5rem;
+  }
+
+  .verse-plate__sanskrit {
+    font-size: clamp(1.7rem, 7vw, 2.4rem);
+  }
+
+  .verse-plate__grid {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 3rem;
+  }
+
+  .verse-note > * + * {
+    margin-top: 2.5rem;
+  }
+
+  .pathfinder-tool {
+    margin-top: 6rem;
+  }
+
+  .pathfinder-tool__prompt {
+    min-height: auto;
+    padding: 0 0 4rem;
+  }
+
+  .pathfinder-tool__result {
+    grid-column: auto;
+    margin-top: 3rem;
+  }
+
+  .protocol-page__intro {
+    margin-top: 6rem;
+  }
+
+  .protocol-list article {
+    display: block;
+  }
+
+  .protocol-list h2 {
+    margin: 1rem 0;
+  }
+
+  .protocol__link {
+    display: inline-block;
+    margin-top: 2rem;
   }
 }
 
