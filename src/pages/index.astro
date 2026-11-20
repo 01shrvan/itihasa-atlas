@@ -1,0 +1,37 @@
+---
+import AtlasExplorer from '../components/AtlasExplorer';
+import '../styles/global.css';
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="description" content="A source-conscious atlas for reading the Mahabharata as a web of choices, vows, and consequences." />
+    <meta name="theme-color" content="#f3eddf" />
+    <title>Itihāsa Atlas — Mahābhārata</title>
+  </head>
+  <body>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero__chrome">
+          <a class="wordmark" href="#top">ITIHĀSA<br /><span>ATLAS</span></a>
+          <p class="hero__edition">MĀHĀBHĀRATA<br />FIELD NOTES · 001</p>
+          <a class="hero__source" href="#method">SOURCE METHOD <span aria-hidden="true">↗</span></a>
+        </div>
+        <div class="hero__weave" aria-hidden="true"><span>● ─ ─ ─ ─ ─ ─ ─ ●</span><span>╲&nbsp;&nbsp; ╳ &nbsp;&nbsp;╱</span><span>● ─ ─ ─ ─ ─ ─ ─ ●</span></div>
+        <div class="hero__copy" id="top">
+          <p class="eyebrow">AN ATLAS OF CONSEQUENCE</p>
+          <h1 id="hero-title">Every war begins<br />long before the <em>battlefield.</em></h1>
+          <p class="hero__intro">Trace the vows, inheritances and impossible choices that pull a family toward Kurukṣetra.</p>
+          <a class="button" href="#atlas">ENTER THE ATLAS <span aria-hidden="true">↓</span></a>
+        </div>
+        <div class="hero__meta"><span>18 PARVAS</span><span>∞ CONSEQUENCES</span><span>01 / 03 PATHS OPEN</span></div>
+      </section>
+      <section class="statement"><p>Not a definitive telling. A carefully marked way in.</p><p class="statement__faint">Read the <em>story</em>. Follow the <em>threads</em>. Meet the <em>verses</em>.</p></section>
+      <AtlasExplorer client:load />
+      <section id="method" class="method"><p class="eyebrow">READING WITH CARE</p><h2>One epic,<br /><em>many witnesses.</em></h2><div><p>Every node in this atlas carries an edition-aware reference. The Critical Edition is the baseline; received and regional traditions remain visible where they change the story.</p><p class="method__note">This preview contains editorial drafts. Verse translations and transliterations remain unpublished until they receive a named Sanskrit reviewer.</p></div></section>
+    </main>
+  </body>
+</html>
